@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchIncomeStatementData } from "../redux/IncomeSlice/IncomeSlice";
 import { useParams, useNavigate } from "react-router-dom";
-
+import {IoMdArrowRoundBack} from "react-icons/io";
+import classes from "../components/Details.module.css";
 const DetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,8 +18,8 @@ const DetailsPage = () => {
   };
 
   return (
-    <div>
-      <button onClick={() => goBackHandler()}>Simon go back</button>
+    <div className={classes.container}>
+      <button onClick={() => goBackHandler()}><IoMdArrowRoundBack/></button>
       {incomeData.map((data) => {
         return (
           <div key={data.id}>
