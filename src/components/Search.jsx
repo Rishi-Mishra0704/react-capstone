@@ -13,6 +13,7 @@ const SearchBar = ({ setSearchQuery }) => {
           placeholder="Search..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          data-testid="search-input"
         />
         <button type="submit">Submit</button>
       </form>

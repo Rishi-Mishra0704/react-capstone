@@ -1,7 +1,42 @@
-.games-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+.header {
+  display: flex;
+  background-color: rgb(82, 1, 157);
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.games-container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.games {
+  width: 100%;
+}
+.games img {
+  width: 100%;
+}
+.games:hover {
+  border: 2px solid #fff;
+}
+@media (min-width: 768px) {
+  .games-container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
+}
+@media (min-width: 1024px) {
+  .games-container {
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+}
