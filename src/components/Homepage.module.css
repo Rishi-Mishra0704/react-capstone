@@ -1,8 +1,4 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 
@@ -11,10 +7,30 @@
   display: flex;
   background-color: rgb(82, 1, 157);
   width: 100%;
-  height: 100px;
+  height: 70px;
   justify-content: space-between;
+  font-size: 28px;
 }
 
+.icons{
+  margin: 20px;
+  color: white;
+}
+.icon{
+  margin: 0 20px;
+}
+.header-text{
+  margin:20px;
+  color: white;
+}
+.filters{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100px;
+  margin: 10px;
+}
 .games-container {
   width: 50%;
   display: grid;

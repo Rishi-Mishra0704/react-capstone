@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import classes from "../components/Homepage.module.css";
 import SearchBar from "../components/Search";
 import Filter from "../components/FIlter";
-
+import {MdKeyboardVoice} from "react-icons/md";
+import {AiFillSetting} from "react-icons/ai";
 const HomePage = () => {
   const dispatch = useDispatch();
   const incomeData = useSelector((state) => state.incomeStatement.data);
@@ -27,8 +28,13 @@ const HomePage = () => {
   return (
     <div role="main" className={classes.container}>
       <div className={classes.header}>
-        <p>Games</p>
-        <div>
+        <p className={classes['header-text']}>Games</p>
+        <div className={classes.icons}>
+          <MdKeyboardVoice className={classes.icon}/>
+          <AiFillSetting className={classes.icon}/>
+        </div>
+      </div>
+        <div className={classes.filters}>
           <SearchBar role="searchbox" setSearchQuery={setSearchQuery} />
           <Filter
             genres={genres}
@@ -36,7 +42,6 @@ const HomePage = () => {
             onGenreChange={setSelectedGenre}
           />
         </div>
-      </div>
       <div className={classes["games-container"]}>
         {filteredData.map((data) => {
           return (

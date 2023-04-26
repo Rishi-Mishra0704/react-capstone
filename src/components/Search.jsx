@@ -8,6 +8,7 @@ const SearchBar = ({ setSearchQuery }) => {
   
     return (
       <form>
+        <label htmlFor="search-input">Search:</label>
         <input
           type="text"
           placeholder="Search..."
