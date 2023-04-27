@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchIncomeStatementData } from "../redux/IncomeSlice/IncomeSlice";
 import { Link } from "react-router-dom";
-import classes from "../components/Homepage.module.css";
+import classes from "../components/styles/Homepage.module.css";
 import SearchBar from "../components/Search";
 import Filter from "../components/FIlter";
-import {MdKeyboardVoice} from "react-icons/md";
-import {AiFillSetting} from "react-icons/ai";
+import { MdKeyboardVoice } from "react-icons/md";
+import { AiFillSetting } from "react-icons/ai";
+
 const HomePage = () => {
   const dispatch = useDispatch();
   const incomeData = useSelector((state) => state.incomeStatement.data);
@@ -28,30 +29,42 @@ const HomePage = () => {
   return (
     <div role="main" className={classes.container}>
       <div className={classes.header}>
-        <p className={classes['header-text']}>Games</p>
+        <p className={classes["header-text"]}>Games</p>
         <div className={classes.icons}>
-          <MdKeyboardVoice className={classes.icon}/>
-          <AiFillSetting className={classes.icon}/>
+          <MdKeyboardVoice className={classes.icon} />
+          <AiFillSetting className={classes.icon} />
         </div>
       </div>
-        <div className={classes.filters}>
-          <SearchBar role="searchbox" setSearchQuery={setSearchQuery} />
-          <Filter
-            genres={genres}
-            selectedGenre={selectedGenre}
-            onGenreChange={setSelectedGenre}
-          />
-        </div>
+      <div className={classes.filters}>
+        <SearchBar role="searchbox" setSearchQuery={setSearchQuery} />
+        <Filter
+          genres={genres}
+          selectedGenre={selectedGenre}
+          onGenreChange={setSelectedGenre}
+        />
+      </div>
       <div className={classes["games-container"]}>
-        {filteredData.map((data) => {
-          return (
-            <div className={classes.games} key={data.id}>
-              <Link to={`/details/${data.id}`}>
-                <img src={data.thumbnail} alt="thumb" />
-              </Link>
-            </div>
-          );
-        })}
+        {selectedGenre === "" && searchQuery === ""
+          ? incomeData.slice(0, 6).map((data) => {
+              return (
+                <div className={classes.games} key={data.id}>
+                  <Link to={`/details/${data.id}`}>
+                    <p>{data.title}</p>
+                  </Link>
+                </div>
+              );
+            })
+          : filteredData.length > 0
+          ? filteredData.map((data) => {
+              return (
+                <div className={classes.games} key={data.id}>
+                  <Link to={`/details/${data.id}`}>
+                    <p>{data.title}</p>
+                  </Link>
+                </div>
+              );
+            })
+          : <p className={classes['no-games']}>No games found</p>}
       </div>
     </div>
   );

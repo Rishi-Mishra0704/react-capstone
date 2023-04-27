@@ -1,9 +1,9 @@
 import React from "react";
-
+import classes from "./styles/Filter.module.css";
 const Filter = ({ genres, selectedGenre, onGenreChange }) => {
   return (
-    <div>
-      <label htmlFor="genre-select">Filter by genre:</label>
+    <div className={classes.filter}>
+      <label htmlFor="genre-select">Filter by genre: </label>
       <select
         id="genre-select"
         value={selectedGenre}

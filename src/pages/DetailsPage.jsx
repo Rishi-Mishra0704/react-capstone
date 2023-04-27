@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchIncomeStatementData } from "../redux/IncomeSlice/IncomeSlice";
 import { useParams, useNavigate } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import classes from "../components/Details.module.css";
+import classes from "../components/styles/Details.module.css";
 import { MdKeyboardVoice } from "react-icons/md";
 import { AiFillSetting } from "react-icons/ai";
 
