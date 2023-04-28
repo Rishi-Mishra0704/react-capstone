@@ -133,8 +133,8 @@ Please give a ⭐️ if you like this project
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank everyone contributed the completion of this project
+I would like to thank Nelson Sakwa for their amazing design which was inspiration of 
+this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

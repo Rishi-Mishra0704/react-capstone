@@ -32,7 +32,6 @@ const HomePage = () => {
       <div className={classes.header}>
         <p className={classes['header-text']}>
           GameZone
-          {' '}
           <IoLogoGameControllerB className={classes.controller} />
         </p>
         <div className={classes.icons}>

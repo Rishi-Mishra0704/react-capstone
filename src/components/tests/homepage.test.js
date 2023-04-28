@@ -12,7 +12,7 @@ describe('HomePage', () => {
         <HomePage />
       </Provider>,
     );
-    const header = screen.getByText('Games');
+    const header = screen.getByText('GameZone');
     expect(header).toBeInTheDocument();
   });
 
