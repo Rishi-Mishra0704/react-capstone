@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MdKeyboardVoice } from 'react-icons/md';
 import { AiFillSetting } from 'react-icons/ai';
+import { IoLogoGameControllerB } from 'react-icons/io';
 import { fetchIncomeStatementData } from '../redux/IncomeSlice/IncomeSlice';
 import classes from '../components/styles/Homepage.module.css';
 import SearchBar from '../components/Search';
@@ -29,7 +30,11 @@ const HomePage = () => {
   return (
     <div role="main" className={classes.container}>
       <div className={classes.header}>
-        <p className={classes['header-text']}>Games</p>
+        <p className={classes['header-text']}>
+          GameZone
+          {' '}
+          <IoLogoGameControllerB className={classes.controller} />
+        </p>
         <div className={classes.icons}>
           <MdKeyboardVoice className={classes.icon} />
           <AiFillSetting className={classes.icon} />
