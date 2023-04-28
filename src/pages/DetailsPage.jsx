@@ -24,8 +24,8 @@ const DetailsPage = () => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <button type="button" className={classes.back} onClick={() => goBackHandler()}>
-          <IoMdArrowRoundBack />
+        <button type="button" onClick={() => goBackHandler()}>
+          <IoMdArrowRoundBack className={classes.back} />
         </button>
         <div className={classes['header-text']}>
           {incomeData.map((data) => (

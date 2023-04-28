@@ -6,19 +6,19 @@
 
 .header {
   display: flex;
+  flex-direction: row;
   background-color: #d04379;
   width: 100%;
   height: 70px;
   justify-content: space-between;
-  font-size: 28px;
 }
 
 .header button {
-  margin: 20px 22px;
+  margin: 20px 16px;
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 28px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -27,17 +27,28 @@
 }
 
 .icons {
-  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 22px 10px;
   color: white;
+  font-size: 14px;
 }
 
 .icon {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .header-text {
+  display: flex;
+  flex-direction: row;
   margin: 19px;
   color: white;
+  font-size: 18px;
+}
+
+.header-text span {
+  display: flex;
+  flex-direction: row;
 }
 
 .details-container {
@@ -91,4 +102,58 @@
 img {
   width: 45%;
   height: 35%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    font-size: 22px;
+  }
+
+  .header button {
+    font-size: 22px;
+  }
+
+  .header-text {
+    font-size: 22px;
+  }
+
+  .icons {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    font-size: 24px;
+  }
+
+  .header button {
+    font-size: 24px;
+  }
+
+  .header-text {
+    font-size: 24px;
+  }
+
+  .icons {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1490px) {
+  .header {
+    font-size: 28px;
+  }
+
+  .header button {
+    font-size: 28px;
+  }
+
+  .header-text {
+    font-size: 28px;
+  }
+
+  .icons {
+    font-size: 28px;
+  }
 }
