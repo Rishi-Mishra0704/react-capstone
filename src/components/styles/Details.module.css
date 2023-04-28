@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #fe5395;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #d04379;
+  width: 100%;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.header button {
+  margin: 20px 16px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  color: rgb(216, 216, 216);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  margin: 22px 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.icon {
+  margin: 0 10px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: row;
+  margin: 19px;
+  color: white;
+  font-size: 18px;
+}
+
+.header-text span {
+  display: flex;
+  flex-direction: row;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.details {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  width: 100%;
+  background-color: #fe5395;
+}
+
+.release {
+  background-color: #fe5395;
+  width: 100%;
+}
+
+.genre {
+  background-color: #d04379;
+  width: 100%;
+}
+
+.platform {
+  background-color: #fe5395;
+  width: 100%;
+}
+
+.developer {
+  background-color: #d04379;
+  width: 100%;
+}
+
+.publisher {
+  background-color: #fe5395;
+  width: 100%;
+}
+
+.description {
+  background-color: #d04379;
+  text-align: left;
+  padding: 0 20%;
+}
+
+img {
+  width: 45%;
+  height: 35%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    font-size: 22px;
+  }
+
+  .header button {
+    font-size: 22px;
+  }
+
+  .header-text {
+    font-size: 22px;
+  }
+
+  .icons {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    font-size: 24px;
+  }
+
+  .header button {
+    font-size: 24px;
+  }
+
+  .header-text {
+    font-size: 24px;
+  }
+
+  .icons {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1490px) {
+  .header {
+    font-size: 28px;
+  }
+
+  .header button {
+    font-size: 28px;
+  }
+
+  .header-text {
+    font-size: 28px;
+  }
+
+  .icons {
+    font-size: 28px;
+  }
+}

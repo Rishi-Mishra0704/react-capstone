@@ -1,0 +1,18 @@
+.form {
+  color: white;
+  margin: 3%;
+}
+
+.form input {
+  display: flex;
+  font-size: 18px;
+  background-color: inherit;
+  color: white;
+  border: 2px solid #52019d;
+  outline: none;
+  width: 150px;
+}
+
+.form input::placeholder {
+  color: white;
+}
