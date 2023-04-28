@@ -1,5 +1,5 @@
-import { fetchIncomeStatementData, incomeReducer } from '../../redux/IncomeSlice/IncomeSlice';
 import { configureStore } from '@reduxjs/toolkit';
+import { fetchIncomeStatementData, incomeReducer } from '../../redux/IncomeSlice/IncomeSlice';
 
 describe('incomeSlice', () => {
   it('should return the initial state', () => {
@@ -20,8 +20,8 @@ describe('incomeSlice', () => {
         },
         {
           type: fetchIncomeStatementData.pending.type,
-        }
-      )
+        },
+      ),
     ).toEqual({
       data: [],
       status: 'loading',
@@ -40,8 +40,8 @@ describe('incomeSlice', () => {
         {
           type: fetchIncomeStatementData.fulfilled.type,
           payload: [{ id: 1, title: 'Game 1' }],
-        }
-      )
+        },
+      ),
     ).toEqual({
       data: [{ id: 1, title: 'Game 1' }],
       status: 'succeeded',
@@ -60,8 +60,8 @@ describe('incomeSlice', () => {
         {
           type: fetchIncomeStatementData.rejected.type,
           error: { message: 'Error fetching income statement data' },
-        }
-      )
+        },
+      ),
     ).toEqual({
       data: [],
       status: 'failed',

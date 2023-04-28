@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
-import classes from "./styles/Search.module.css";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import classes from './styles/Search.module.css';
 
 const SearchBar = ({ setSearchQuery }) => {
-    const [inputValue, setInputValue] = useState("");
-  
-    useEffect(() => {
-      setSearchQuery(inputValue);
-    }, [inputValue, setSearchQuery]);
-  
-    return (
-      <form className={classes.form}>
-        <label className={classes.search} htmlFor="search-input">Search: </label>
+  const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    setSearchQuery(inputValue);
+  }, [inputValue, setSearchQuery]);
+
+  return (
+    <form className={classes.form}>
+      <label className={classes.search} htmlFor="search-input">
+        Search:
         <input
           type="text"
           placeholder="Search..."
@@ -19,8 +21,14 @@ const SearchBar = ({ setSearchQuery }) => {
           className={classes.input}
           data-testid="search-input"
         />
-      </form>
-    );
-  };
 
-  export default SearchBar;
+      </label>
+    </form>
+  );
+};
+
+SearchBar.propTypes = {
+  setSearchQuery: PropTypes.func.isRequired,
+};
+
+export default SearchBar;

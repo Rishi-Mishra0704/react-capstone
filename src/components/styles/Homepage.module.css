@@ -2,9 +2,10 @@
   width: 100%;
   height: 100%;
 }
+
 .header {
   display: flex;
-  background-color: rgb(82, 1, 157);
+  background-color: #d04379;
   width: 100%;
   height: 70px;
   justify-content: space-between;
@@ -15,13 +16,16 @@
   margin: 20px;
   color: white;
 }
+
 .icon {
   margin: 0 20px;
 }
+
 .header-text {
   margin: 20px;
   color: white;
 }
+
 .filters {
   display: flex;
   align-items: center;
@@ -29,7 +33,7 @@
   width: 99.5%;
   height: 128px;
   font-size: 24px;
-  border:2px solid black;
+  border: 2px solid black;
   position: relative;
   z-index: 1;
 }
@@ -43,7 +47,7 @@
   height: 100%;
   background-image: url("../assets/gamesBg.jpeg");
   background-size: contain;
-  opacity: 0.15;
+  opacity: 0.2;
   z-index: -1;
 }
 
@@ -54,25 +58,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #8a2be2;
+  background-color: #fe5395;
   z-index: -2;
 }
 
-.games:nth-child(4n + 1),
-.games:nth-child(4n) {
-  background-color: #8a2be2;
-}
-
-.games:nth-child(4n + 3),
-.games:nth-child(4n + 2) {
-  background-color: #52019d;
-}
-
-.games-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 .games {
   display: flex;
   flex-direction: column;
@@ -80,6 +69,23 @@
   align-items: center;
   height: 240px;
 }
+
+.games:nth-child(4n + 1),
+.games:nth-child(4n) {
+  background-color: #fe5395;
+}
+
+.games:nth-child(4n + 3),
+.games:nth-child(4n + 2) {
+  background-color: #d04379;
+}
+
+.games-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .games a {
   font-size: xx-large;
   width: 100%;
@@ -87,9 +93,11 @@
   color: #fff;
   text-decoration: none;
 }
+
 .games:hover {
   border: 2px solid #fff;
 }
+
 .no-games {
   position: absolute;
   top: 50%;
@@ -99,6 +107,7 @@
   font-weight: bolder;
   color: #fff;
 }
+
 /* @media screen and (min-width: 768px) {
   .games {
     height: 300px;
@@ -111,11 +120,11 @@
   }
 } */
 
-
 @media screen and (min-width: 1490px) {
   .games {
     height: 180px;
   }
+
   .filters {
     width: 99.8%;
   }
