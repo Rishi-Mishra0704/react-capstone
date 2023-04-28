@@ -56,7 +56,8 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## <h1>🚀Live Demo</h1><a name="Live-Demo" href = "#"></a>
+## <h1>🚀Live Demo</h1><a name="Live-Demo" href = "https://rishisgamezone.onrender.com/">Live Demo</a>
+## <h1>🚀Live Video</h1><a name="Live-Demo" href = "https://www.loom.com/share/8775da82cc7a41688040aa07c158bf31">Live Video</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
